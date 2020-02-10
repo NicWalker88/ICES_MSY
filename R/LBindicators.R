@@ -90,6 +90,7 @@ length_plot <- function(length_data,
   df0.long <- melt(df0, id.vars = 'MeanLength')
   df0.long$variable <- gsub("X", "", as.character(df0.long$variable))
   
+  # Minimum and maximum length classes
   minCL <- floor((min(df0$MeanLength) - .5) / ClassInt) * ClassInt  # original data 1mm length class
   maxCL <- ceiling((max(df0$MeanLength) + .5) / ClassInt) * ClassInt
   
